@@ -71,7 +71,7 @@ class GenericQuestion extends ConsumerWidget {
       future: getGenericQuestionTopicId(ref),
       builder: (BuildContext context, AsyncSnapshot<int> snapshot) {
         if (snapshot.connectionState == ConnectionState.waiting) {
-          return const Center(child: CircularProgressIndicator());
+          return const Text("No connection");
         } else if (snapshot.hasError) {
           return Text('Error: ${snapshot.error}');
         } else if (!snapshot.hasData) {
@@ -92,6 +92,6 @@ class GenericQuestion extends ConsumerWidget {
       },
     );
 
-    return Expanded(child: future);
+    return future;
   }
 }

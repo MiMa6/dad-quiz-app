@@ -48,7 +48,7 @@ class _QuestionPageState extends ConsumerState<QuestionPage> {
         body: Column(mainAxisAlignment: MainAxisAlignment.center, children: [
           
           // Show image if question have one
-          (questionClass.image_url != "no_url")
+          (questionClass.image_url != "")
             ? Image.network(questionClass.image_url)
             : Container(),
           Center(
