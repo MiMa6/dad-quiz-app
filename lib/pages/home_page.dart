@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
-import '../apis_and_providers/providers.dart';
+import '../services/providers.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
 class HomePage extends StatelessWidget {
@@ -21,6 +21,8 @@ class HomePage extends StatelessWidget {
           ]
         ),
         body: const Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            crossAxisAlignment: CrossAxisAlignment.center,
             children: [
               Text("Choose topic below", style: TextStyle(height: 5, fontSize: 20)),
               TopicList(),
@@ -43,14 +45,12 @@ class TopicList extends ConsumerWidget {
                 ref.watch(questionProvider.notifier).getQuestion(topic.id);
                 context.go("/topics/${topic.id}/questions");
               },
-              //style: ElevatedButton.styleFrom(
-              //  //backgroundColor: const Color.fromARGB(255, 0, 0, 0),
-              //),
               child:Text(topic.name),
           ),
         ))
         );
-
+      
+      
       if (topics.isNotEmpty) {
         return Expanded(child: ListView(children: items));
       } else {

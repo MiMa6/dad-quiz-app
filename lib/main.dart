@@ -27,7 +27,7 @@ void main() async {
       routerConfig: router,
       theme: ThemeData(
         colorScheme: ColorScheme.fromSwatch(primarySwatch: Colors.lightBlue),
-        textTheme: const TextTheme(titleMedium: TextStyle(color: Colors.brown)),
+        textTheme: const TextTheme(titleMedium: TextStyle(color: Colors.black)),
       ),
     ),
   ));
