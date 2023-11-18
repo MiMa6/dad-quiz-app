@@ -1,7 +1,9 @@
 import 'dart:convert';
 import 'package:http/http.dart' as http;
 
-import '../utils/data_classes.dart';
+import '../models/topic.dart';
+import '../models/question.dart';
+import '../models/answer.dart';
 
 class TopicApi {
 

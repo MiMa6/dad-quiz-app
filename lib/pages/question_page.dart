@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import '../apis_and_providers/providers.dart';
+import '../services/providers.dart';
 import 'package:go_router/go_router.dart';
 
 class QuestionPage extends ConsumerStatefulWidget {
@@ -17,11 +17,11 @@ class _QuestionPageState extends ConsumerState<QuestionPage> {
     final questionClass = ref.watch(questionProvider);
     final isCorrectAnswer = ref.watch(correctAnswerProvider);
     final isCorrectAnswerNotifier = ref.watch(correctAnswerProvider.notifier);
-    final isQuestionAnswered = ref.watch(isQuestionAnswerProvider);
+    final isQuestionAnswered = ref.watch(isQuestionAnsweredProvider);
 
     resetQuestionStates(ref) {
       ref.watch(correctAnswerProvider.notifier).setFalse();
-      ref.watch(isQuestionAnswerProvider.notifier).state = false;
+      ref.watch(isQuestionAnsweredProvider.notifier).state = false;
     }
 
     return Scaffold(
@@ -76,7 +76,7 @@ class _QuestionPageState extends ConsumerState<QuestionPage> {
                     ),
                   ),
                   onPressed: () {
-                    ref.watch(isQuestionAnswerProvider.notifier).state = true;
+                    ref.watch(isQuestionAnsweredProvider.notifier).state = true;
                     isCorrectAnswerNotifier.getQuestionAnswer(
                         questionClass.options[index],
                         widget.topicId,
@@ -89,14 +89,14 @@ class _QuestionPageState extends ConsumerState<QuestionPage> {
             },
           )),
 
-          // When answer if tru shows button to get new question
+          // When answer is true code below shows button to get new question
           (isCorrectAnswer.correct == true)
               ? ElevatedButton(
                   onPressed: () {
                     ref
                         .watch(questionProvider.notifier)
                         .getQuestion(widget.topicId);
-                    ref.watch(isQuestionAnswerProvider.notifier).state = false;
+                    resetQuestionStates(ref);
                   },
                   style: ElevatedButton.styleFrom(
                     backgroundColor: const Color.fromARGB(255, 148, 242, 39),
