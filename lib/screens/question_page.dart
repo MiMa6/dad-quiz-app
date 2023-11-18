@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import '../services/providers.dart';
+import '../providers/providers.dart';
 import 'package:go_router/go_router.dart';
 
 class QuestionPage extends ConsumerStatefulWidget {

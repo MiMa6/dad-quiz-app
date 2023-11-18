@@ -2,8 +2,8 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import '../models/topic.dart';
 import '../models/question.dart';
 import '../models/answer.dart';
-import '../utils/counters.dart';
-import 'apis.dart';
+import '../services/counters.dart';
+import '../services/apis.dart';
 
 class TopicNotifier extends StateNotifier<List<Topic>> {
   final topicApi = TopicApi();

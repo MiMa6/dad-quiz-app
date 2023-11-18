@@ -3,9 +3,9 @@ import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
-import 'pages/home_page.dart';
-import 'pages/statics_page.dart';
-import 'pages/question_page.dart';
+import 'screens/home_page.dart';
+import 'screens/statics_page.dart';
+import 'screens/question_page.dart';
 
 void main() async {
   final router = GoRouter(

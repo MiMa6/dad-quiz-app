@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import '../utils/counters.dart';
+import '../services/counters.dart';
 
 class StaticsPage extends ConsumerWidget {
   const StaticsPage({super.key});
