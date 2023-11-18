@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
-import '../services/providers.dart';
+import '../providers/providers.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import '../utils/sort_questions.dart';
+import '../services/sort_questions.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({super.key});

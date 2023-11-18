@@ -1,7 +1,7 @@
 import 'dart:math';
 
 import 'package:shared_preferences/shared_preferences.dart';
-import '../services/providers.dart';
+import '../providers/providers.dart';
 import '../models/topic.dart';
 
 Future<int> getAnswerCount() async {
