@@ -7,22 +7,20 @@ import 'pages/statics_page.dart';
 import 'pages/question_page.dart';
 
 void main() async {
-  //final prefs = await SharedPreferences.getInstance();
   final router = GoRouter(
     routes: [
       GoRoute(path: '/', builder: (context, state) => const HomePage()),
       GoRoute(
           path: '/topics/:topicId/questions',
-          builder: (context, state) =>
-              QuestionPage(topicId: int.parse(state.pathParameters['topicId']!))),
-      GoRoute(path: '/statistics', builder: (context, state) => const StaticsPage()),
+          builder: (context, state) => QuestionPage(
+              topicId: int.parse(state.pathParameters['topicId']!))),
+      GoRoute(
+          path: '/statistics',
+          builder: (context, state) => const StaticsPage()),
     ],
   );
 
   runApp(ProviderScope(
-    //overrides: [
-    //  sharedPreferencesProvider.overrideWithValue(prefs),
-    //],
     child: MaterialApp.router(
       routerConfig: router,
       theme: ThemeData(
