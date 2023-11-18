@@ -6,7 +6,6 @@ import '../models/topic.dart';
 
 Future<int> getAnswerCount() async {
   final prefs = await SharedPreferences.getInstance();
-
   if (prefs.containsKey('answers')) {
     return prefs.getInt('answers')!;
   }

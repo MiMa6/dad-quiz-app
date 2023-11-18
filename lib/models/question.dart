@@ -9,7 +9,7 @@ class Question {
     : id = jsonData['id'],
       image_url = jsonData.containsKey('image_url')
         ? jsonData['image_url']
-        : 'no_url',
+        : '',
       question = jsonData['question'],
       options = List<String>.from(jsonData['options']),
       answer_post_path = jsonData['answer_post_path'];
