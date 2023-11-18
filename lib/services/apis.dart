@@ -6,9 +6,7 @@ import '../models/question.dart';
 import '../models/answer.dart';
 
 class TopicApi {
-
   Future<List<Topic>> findAll() async {
-    
     final response = await http.get(
       Uri.parse("https://dad-quiz-api.deno.dev/topics"),
     );
@@ -18,11 +16,9 @@ class TopicApi {
       (jsonData) => Topic.fromJson(jsonData),
     ));
   }
-  
 }
 
 class QuestionApi {
-  
   Future<Question> fetchQuestion(int topicId) async {
     final response = await http.get(
       Uri.parse("https://dad-quiz-api.deno.dev/topics/$topicId/questions"),
@@ -33,11 +29,11 @@ class QuestionApi {
 }
 
 class AnswerApi {
-  
-  Future<Answer> answerQuestion(String answer, int topicId, int questionId) async {
-
+  Future<Answer> answerQuestion(
+      String answer, int topicId, int questionId) async {
     final response = await http.post(
-      Uri.parse("https://dad-quiz-api.deno.dev/topics/$topicId/questions/$questionId/answers"),
+      Uri.parse(
+          "https://dad-quiz-api.deno.dev/topics/$topicId/questions/$questionId/answers"),
       headers: {'Content-Type': 'application/json; charset=UTF-8'},
       body: jsonEncode({"answer": answer}),
     );
@@ -45,5 +41,3 @@ class AnswerApi {
     return a;
   }
 }
-
-
