@@ -17,10 +17,10 @@ class TopicNotifier extends StateNotifier<List<Topic>> {
 class QuestionNotifier extends StateNotifier<Question> {
   final questionApi = QuestionApi();
 
-  QuestionNotifier() : super(Question.fromJson({"id":1, "question": '', "options": [], "answer_post_path": ""}));
+  QuestionNotifier() : super(Question.fromJson({"id":1, "image_url":"","question": '', "options": [], "answer_post_path": ""}));
 
   clearQuestion() async {
-    state = Question.fromJson({"id":1, "question": '', "options": [], "answer_post_path": ""});
+    state = Question.fromJson({"id":1, "image_url":"","question": '', "options": [], "answer_post_path": ""});
   }
 
   getQuestion(int topicId) async {
