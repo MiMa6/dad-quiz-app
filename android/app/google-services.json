@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "1092325822218",
+    "project_id": "fir-dad-quiz",
+    "storage_bucket": "fir-dad-quiz.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1092325822218:android:3d11a06b84ebac61fe34f3",
+        "android_client_info": {
+          "package_name": "com.example.dad_quiz_app"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDSUEyq2fY7fCwdtiIAQaH7ipMkK3fJrpg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
