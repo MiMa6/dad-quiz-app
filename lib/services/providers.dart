@@ -51,6 +51,7 @@ class CorrectAnswernNotifier extends StateNotifier<Answer> {
 
 final topicProvider = StateNotifierProvider<TopicNotifier, List<Topic>>((ref) {
   final tn = TopicNotifier();
+  
   tn._initialize();
   return tn;
 });
