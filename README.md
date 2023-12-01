@@ -3,7 +3,7 @@
 https://mima6.github.io/quiz-site/
 
 ## Link to app repo
-https://mima6.github.io/quiz-site/
+[https://mima6.github.io/quiz-site/](https://github.com/MiMa6/dad-quiz-app)
 
 ## Description
 The **DAD Quiz App** is an multiple choise question application. When starting the app it shows Home page with questions.
